@@ -65,7 +65,7 @@
     "build:babel": "babel src/ -d dist",
     "build:copy-flow-source": "flow-copy-source --verbose src dist",
     "build:copy-ts-defs": "copyfiles index.d.ts dist",
-    "build:webpack": "webpack -p --progress --colors",
+    "build:webpack": "webpack --progress --color",
     "clean": "rimraf dist",
     "dev:babel": "babel --watch src/ -d dist",
     "dev:webpack": "yarn dev:delay && webpack --progress --color --watch",
