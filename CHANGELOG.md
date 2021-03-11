@@ -1,5 +1,11 @@
 # Changelog
 
+## [v.1.1.1] - 2021-03-11
+
+### Added
+
+- prevent default keyboard event on image overlay
+
 ## [v1.1.0] - 2021-02-05
 
 ### Changed
