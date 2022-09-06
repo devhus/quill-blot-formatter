@@ -3,7 +3,7 @@ module.exports = {
   output: {
     filename: 'quill-blot-formatter.min.js',
     path: `${__dirname}/dist`,
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs',
     library: 'QuillBlotFormatter',
   },
   externals: {

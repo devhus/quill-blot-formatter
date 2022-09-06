@@ -1,9 +1,9 @@
 // @flow
 
-import deepmerge from 'deepmerge';
+import { merge } from 'lodash';
+import Action from './actions/Action';
 import type { Options } from './Options';
 import DefaultOptions from './Options';
-import Action from './actions/Action';
 import BlotSpec from './specs/BlotSpec';
 
 const dontMerge = (destination: Array<any>, source: Array<any>) => source;
@@ -18,7 +18,7 @@ export default class BlotFormatter {
 
   constructor(quill: any, options: $Shape<Options> = {}) {
     this.quill = quill;
-    this.options = deepmerge(DefaultOptions, options, { arrayMerge: dontMerge });
+    this.options = merge(DefaultOptions, options);
     this.currentSpec = null;
     this.actions = [];
     this.overlay = document.createElement('div');
